@@ -1,6 +1,9 @@
 {
     "name": "cool_A",
     "git": "git@github.com:neacsum/example_cool_A.git",
+    "depends": [
+        {"name": "multi_mod", "git": "git@github.com:neacsum/example_multi_mod.git", "module": "module_A"}
+    ],
     "build": [
         {"cmd": "build.bat"}
     ] 

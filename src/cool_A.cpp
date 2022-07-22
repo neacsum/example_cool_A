@@ -9,6 +9,10 @@
 
 #include <cool_A/hdr1.h>
 #include <cool_A/hdr2.h>
+
+//include header of a dependent package
+#include <module_A/A.h>
+
 #include <ipow.h>
 
 // This is an example of a library function
