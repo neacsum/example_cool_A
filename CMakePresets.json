@@ -1,0 +1,101 @@
+{
+  "version": 6,
+  "configurePresets":[
+    {
+      "name": "x64",
+      "displayName": "Windows x64 Config",
+      "binaryDir": "${sourceDir}/build/x64"
+    },
+    {
+      "name": "x86",
+      "displayName": "Windows x86 Config",
+      "architecture": {
+        "value": "win32"
+      },
+      "binaryDir": "${sourceDir}/build/x86"
+    },
+    {
+      "name": "gcc",
+      "displayName": "Linux w/w GCC compiler",
+      "binaryDir": "${sourceDir}/build/gcc"
+    }
+  ],
+
+  "buildPresets":[
+    {
+      "name": "debug_x64",
+      "configurePreset": "x64",
+      "configuration": "Debug"
+    },
+    {
+      "name": "release_x64",
+      "configurePreset": "x64",
+      "configuration": "Release"
+    },
+    {
+      "name": "debug_x86",
+      "configurePreset": "x86",
+      "configuration": "Debug"
+    },
+    {
+      "name": "release_x86",
+      "configurePreset": "x86",
+      "configuration": "Release"
+    },
+    {
+      "name": "release_gcc",
+      "configurePreset": "gcc"
+    }
+
+  ],
+
+  "workflowPresets":[
+    {
+      "name": "x64",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x64"
+        },
+        {
+          "type": "build",
+          "name": "debug_x64"
+        },
+        {
+          "type": "build",
+          "name": "release_x64"
+        }
+      ]
+    },
+    {
+      "name": "x86",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86"
+        },
+        {
+          "type": "build",
+          "name": "debug_x86"
+        },
+        {
+          "type": "build",
+          "name": "release_x86"
+        }
+      ]
+    },
+    {
+      "name": "gcc",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "gcc"
+        },
+        {
+          "type": "build",
+          "name": "release_gcc"
+        }
+      ]
+    }
+  ]
+}
