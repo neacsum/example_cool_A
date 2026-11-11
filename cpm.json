@@ -1,12 +1,11 @@
 {
     "name":  "cool_A",
     "https": "https://github.com/neacsum/example_cool_A.git",
-    "git":   "git@github.com:neacsum/example_cool_A.git",
+    "uri":   "git@github.com:neacsum/example_cool_A.git",
     "depends": [
         {
             "name":     "multi_mod", 
-            "https":    "https://github.com/neacsum/example_multi_mod.git", 
-            "git":      "git@github.com:neacsum/example_multi_mod.git", 
+            "uri":      "git@github.com:neacsum/example_multi_mod.git", 
             "modules":  ["module_A"],
             "branch":   "new_branch"
         }
